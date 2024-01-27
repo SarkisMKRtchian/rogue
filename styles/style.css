@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+h1 {
+    font-family: "Playfair Display";
+    font-size: 30px;
+    padding: 10px 0px;
+    margin: 0px;
+}
+
+.field-box {
+    border: 2px solid #d0d0d0;
+    float: left;
+}
+
+.field {
+    position: relative;
+    overflow: hidden;
+    width: 1050px;
+    height: 650px;
+}
+
+.field *{
+    background-size: 100%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+.field .tileF{
+    background-image: url(../images/tile-.png);
+    z-index: 5;
+}
+
+.field .tileW {
+    background-image: url(../images/tile-W.png);
+}
+
+.field .tileE {
+    background-image: url(../images/tile-E.png);
+    z-index: 10;
+}
+
+.field .tileP {
+    background-image: url(../images/tile-P.png);
+    z-index: 10;
+}
+
+.field .tileHP {
+    background-image: url(../images/tile-HP.png);
+    z-index: 9;
+}
+
+.field .tileSW {
+    background-image: url(../images/tile-SW.png);
+    z-index: 9;
+}
+
+.field .tileE .health {
+    background-color: #ff0000;
+    z-index: 11;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 3px;
+}
+
+.field .tileP .health {
+    background-color: #00ff00;
+    z-index: 11;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 3px;
+}
+
+.inventory-box {
+    border: 2px solid #d0d0d0;
+    float: left;
+}
+
+.inventory {
+    position: relative;
+    width: 800px;
+    height: 32px;
+}
+
+.cl {
+    clear: both;
+    display: block;
+}
+
+.game{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    background: #8b8b8b33;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game button{
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: white;
+    cursor: pointer;
+    position: static;
+}
+
+.gameOver button{
+    background: #9d0e00;
+}
+
+.gameWin button{
+    background: #0a7e00;
+}
+
+.gameOver button:hover{
+    background: #ff1700;
+}
+.gameWin button:hover{
+    background: #10c000;
+}
+
+.game h1{
+    position: static;
+    width: fit-content;
+    font-weight: 700;
+    
+}
+
+.gameOver h1{
+    color: #ff1700;
+}
+.gameWin h1{
+    color: #10c000;
+}
